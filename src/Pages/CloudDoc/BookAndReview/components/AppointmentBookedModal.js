@@ -61,7 +61,7 @@ export default function AppointmentBookedModal({ onClose }) {
 
           <button
             onClick={() =>
-              (window.location.href = "https://cloud-doc-doc.herokuapp.com/")
+              (window.location.href = "http://ec2-18-221-57-201.us-east-2.compute.amazonaws.com/pat")
             }
             className=" loginBtn signUpButton mt-3"
           >
