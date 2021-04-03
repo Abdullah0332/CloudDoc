@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Route, Switch } from "react-router-dom";
+
+import './App.css';
 
 //CloudDoc Routes
 import Header from "./components/CloudDoc/Header";
