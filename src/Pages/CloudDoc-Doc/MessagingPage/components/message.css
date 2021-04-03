@@ -1,0 +1,180 @@
+.message {
+  height: 78vh;
+}
+
+.message .mainFlex {
+  display: flex;
+  align-items: flex-start;
+  height: 100%;
+}
+.message .mainFlex .userSec {
+  width: 25%;
+  height: 100%;
+  padding: 14px 20px;
+  border-right: 0.1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  user-select: none;
+}
+.message .mainFlex .messageSec {
+  width: 100%;
+}
+.userSec .searchBar {
+  position: relative;
+  margin-bottom: 20px;
+}
+.userSec .searchBar .search {
+  height: 45px;
+  background-color: #f8f8f8;
+  border-radius: 13px;
+  padding-left: 45px;
+  font: 13px roboto;
+  border: none;
+  width: 100%;
+}
+.userSec .searchBar .search::placeholder {
+  color: #b0b3c7;
+  font: 13px roboto;
+}
+.userSec .searchBar .searchIconDiv {
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  cursor: pointer;
+  width: 20px;
+}
+.message .userItem {
+  background-color: #fff;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  position: relative;
+}
+.message .userItem:hover {
+  background-color: rgba(90, 209, 221, 0.1);
+}
+.message .userItemActive {
+  background-color: rgba(90, 209, 221, 0.1);
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  position: relative;
+}
+
+.message .userItem .profileImg {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+.message .userItem .name {
+  font: 14px robotoBd;
+  margin-bottom: 5px;
+}
+.message .userItem .text {
+  font: 12px robotoMd;
+}
+.message .userItem .new {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font: 10px robotoMd;
+  background-color: var(--colorBlue);
+  right: 20px;
+  top: 15px;
+}
+.message .messageSec {
+  height: 100%;
+  position: relative;
+}
+.message .messageSec .header {
+  padding: 0px 30px;
+  background-color: #fff;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  height: 10%;
+}
+.message .messageSec .bottomSec {
+  height: 8%;
+  padding: 0 20px;
+}
+.message .messageSec .bottomSec .sendInput {
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  width: 100%;
+  padding: 14px 60px;
+  height: 100%;
+  font: 14px roboto;
+  border: none;
+  margin-top: 8px;
+}
+.message .messageSec .bottomSec .sendDiv {
+  position: relative;
+  margin-top: 10px;
+}
+.message .messageSec .bottomSec .attachmentDiv {
+  position: absolute;
+  width: 25px;
+  left: 20px;
+  bottom: 11px;
+}
+.message .messageSec .bottomSec .sendIconDiv {
+  position: absolute;
+  right: 20px;
+  bottom: 11px;
+  width: 25px;
+}
+.message .messageSec .innerMessageSec {
+  height: 73%;
+  overflow: auto;
+}
+
+.innerMessageSec .messageDiv {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 5px;
+}
+.innerMessageSec .myMessage {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row-reverse;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.innerMessageSec .messageDiv .messageText {
+  background-color: #f8f8f8;
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+  font: 12px roboto;
+  margin: 0 10px;
+  line-height: 1.5;
+  border-radius: 8px;
+}
+.innerMessageSec .myMessage .messageText {
+  background-color: rgba(90, 209, 221, 0.1);
+}
+.innerMessageSec .messageDiv .msgImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.overFlowAuto {
+  overflow: auto;
+  height: 90%;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .message .mainFlex .messageSec {
+    width: 100%;
+  }
+}
