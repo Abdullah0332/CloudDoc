@@ -93,7 +93,7 @@ export default function ConsulationPage() {
                           className="btn btn-outline-primary btn-sm"
                           style={{ font: "12px roboto" }}
                           onClick={() =>
-                            (window.location.href = "http://ec2-18-221-57-201.us-east-2.compute.amazonaws.com/waiting-room")
+                            (window.location.href = "/waiting-room")
                           }
                         >
                           Start Consulation

@@ -5,13 +5,13 @@ import { Route } from "react-router-dom";
 import Header from "../components/CloudDoc-Pat/Header";
 import SideBar from "../components/CloudDoc-Pat/SideBar";
 
-import DashboardPage from "../Pages/CloudDoc-Pet/DashboardPage/DashboardPage";
-import AppointmentsPage from "../Pages/CloudDoc-Pet/AppointmentsPage/AppointmentsPage";
-import ConsulationPage from "../Pages/CloudDoc-Pet/ConsulationPage/ConsulationPage";
-import MessagingPage from "../Pages/CloudDoc-Pet/MessagingPage/MessagingPage";
-import PaymentHistory from "../Pages/CloudDoc-Pet/PaymentHistory/PaymentHistory";
-import PrescriptionPage from "../Pages/CloudDoc-Pet/PrescriptionPage/PrescriptionPage";
-import SettingPage from "../Pages/CloudDoc-Pet/SettingPage/SettingPage";
+import DashboardPage from "../Pages/CloudDoc-Pat/DashboardPage/DashboardPage";
+import AppointmentsPage from "../Pages/CloudDoc-Pat/AppointmentsPage/AppointmentsPage";
+import ConsulationPage from "../Pages/CloudDoc-Pat/ConsulationPage/ConsulationPage";
+import MessagingPage from "../Pages/CloudDoc-Pat/MessagingPage/MessagingPage";
+import PaymentHistory from "../Pages/CloudDoc-Pat/PaymentHistory/PaymentHistory";
+import PrescriptionPage from "../Pages/CloudDoc-Pat/PrescriptionPage/PrescriptionPage";
+import SettingPage from "../Pages/CloudDoc-Pat/SettingPage/SettingPage";
 
 const PatRoutes = () => {
 
