@@ -4,7 +4,7 @@ export default function StepsSection() {
   return (
     <div className="lightBg">
       <div className="basicLandingRow stepsSec">
-        <div className="basicLandingTitle secTitle">
+        <div className="basicLandingTitle" style={{ paddingTop: '50px', paddingBottom: '50px', textAlign: 'center' }}>
           The Cloud doc is telehealth, but convenient
         </div>
         <div className="stepFlex">

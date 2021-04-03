@@ -3,7 +3,7 @@ import React from "react";
 export default function Header({ active, setHandleActive }) {
   return (
     <div>
-      <nav class="flexBetweenCenter navBar ">
+      <nav class="flexBetweenCenter dashboardNavBar ">
         {/* SideBarButton */}
         <div className="d-inline d-md-none">
           <div

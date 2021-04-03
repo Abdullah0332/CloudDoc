@@ -20,6 +20,26 @@
   font-family: "poppinsBd";
   src: url(assets//fonts/Poppins-Bold.ttf);
 }
+@font-face {
+  font-family: "latoBd";
+  src: url(assets//fonts/Lato-Bold.ttf);
+}
+@font-face {
+  font-family: "lato";
+  src: url(assets//fonts/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: "roboto";
+  src: url(assets//fonts/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: "robotoMd";
+  src: url(assets//fonts/Roboto-Medium.ttf);
+}
+@font-face {
+  font-family: "robotoBd";
+  src: url(assets//fonts/Roboto-Bold.ttf);
+}
 
 
 /* common css */
@@ -63,6 +83,9 @@ a:hover {
 }
 .blueBg {
   background-color: var(--primaryBlue);
+}
+.blackBg {
+  background-color: var(--colorBlack);
 }
 
 .lightBg {
@@ -125,11 +148,58 @@ a:hover {
 .textBlue {
   color: var(--primaryBlue);
 }
+.textBlack2 {
+  color: var(--colorBlack2);
+}
+
+.textBlack {
+  color: var(--colorBlack);
+}
+
 .headerPadding {
   padding-top: 60px;
 }
 .pointer {
   cursor: pointer;
+}
+.primaryIcon {
+  width: 43px;
+  height: 43px;
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circleIcon {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.basicSmallText {
+  font: 14px poppins;
+  color: var(--colorBlack2);
+  font-style: italic;
+  margin: 20px 0;
+}
+
+.inputDiv {
+  margin-bottom: 10px;
+  width: 100%;
+}
+.inputText {
+  border: 1px solid var(--colorBlack);
+  padding-left: 20px;
+  height: 40px;
+  width: 100%;
+  border-radius: 15px;
+  background-color: #fff;
 }
 .dashboardMainDiv {
   display: flex;
@@ -171,6 +241,87 @@ a:hover {
 .bg-navColor {
   background-color: #e2f7fc;
 }
+
+.dashboardNavBar {
+  width: 100%;
+  z-index: 1000;
+  padding: 20px 40px;
+  box-shadow: var(--shadow);
+}
+.dashboardNavBar .navBrand {
+  font: 18px poppinsMd;
+}
+.dashboardNavBar .icon {
+  margin-right: 20px;
+}
+.sideBar {
+  width: 230px;
+  padding: 20px 20px;
+  box-shadow: var(--shadow);
+  height: 100%;
+}
+.sideBarM {
+  width: 230px;
+  padding: 40px 20px;
+  box-shadow: var(--shadow);
+  height: 100vh;
+  position: absolute;
+  transform: translateX(-100vw);
+  transition-delay: 0.6s;
+  -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  background-color: #fff;
+  z-index: 9999;
+}
+.sideBarMActive {
+  transform: translateX(0px) !important;
+}
+.sideBarModal {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  transition-delay: 0.6s;
+  -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999;
+}
+.sideBarModalActive {
+  opacity: 1;
+  visibility: visible;
+}
+.opacityZero {
+  opacity: 0;
+}
+.navDropDownDiv {
+  position: relative;
+}
+.navDropDown {
+  position: absolute;
+  left: 0;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 5px 6px 18px rgba(0, 0, 0, 0.07);
+  padding: 18px;
+  width: 277px;
+}
+.navDropDown .item {
+  font: 14px poppins;
+  color: var(--colorBlack);
+  margin-bottom: 15px;
+}
+.navDropDown .item:hover {
+  font: 14px poppins;
+  color: var(--colorBlue);
+  margin-bottom: 15px;
+}
+
+
 
 /* Button Css */
 .navaBarButton {
@@ -223,8 +374,90 @@ a:hover {
   transform: translateY(-6px) rotateZ(135deg);
   background-color: #fff !important;
 }
+
+.activeSideBar > .dashboardNavBarLine1,
+.activeSideBar:hover > .dashboardNavBarLine1 {
+  transform: translateY(6px) rotateZ(-135deg);
+  background-color: #fff !important;
+}
+.activeSideBar > .dashboardNavBarLine2,
+.activeSideBar:hover > .dashboardNavBarLine2 {
+  opacity: 0;
+}
+.activeSideBar > .dashboardNavBarLine3,
+.activeSideBar:hover > .dashboardNavBarLine3 {
+  transform: translateY(-6px) rotateZ(135deg);
+  background-color: #fff !important;
+}
+
 /* Button Css Ends */
 
+.sideBarDiv .logo {
+  width: 180px;
+}
+.navIcons .icon {
+  width: 20px;
+}
+.sideBarDiv .itemsFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 30px;
+  width: 100%;
+  height: 89%;
+}
+.sideBarDiv .icon {
+  width: 11px;
+}
+.sideBarDiv .DashboardSideBarItem {
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+  width: 100%;
+  cursor: pointer;
+  user-select: none;
+}
+.sideBarDiv .sideBarItemActive .circleIcon {
+  background-color: #5ad1dd;
+}
+.sideBarDiv .sideBarItemActive .title {
+  color: #5ad1dd;
+}
+.sideBarDiv .DashboardSideBarItem:hover {
+  box-shadow: var(--shadow);
+}
+.sideBarDiv .DashboardSideBarItem .title {
+  font: 14px poppins;
+  margin-left: 20px;
+}
+
+.dashboardNavaBarButton {
+  position: relative;
+  transform: translateZ(100px);
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  width: 43px;
+  padding: 10px;
+
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+.dashboardNavaBarButton:hover {
+  transform: scale(1.2);
+}
+.dashboardNavBarLine {
+  display: block;
+  height: 2.5px;
+  width: 100%;
+  background-color: #1f1f1f;
+  margin-bottom: 4px;
+  border-radius: 2px;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    opacity 0.2s ease-out;
+  transform: translateZ(0);
+}
 .headerSideBar {
   position: fixed;
   left: 0;
@@ -459,375 +692,6 @@ a:hover {
 }
 
 
-
-
-/* Doctor Css */
-
-
-/* adding fonts */
-@font-face {
-  font-family: "poppins";
-  src: url(assets/fonts/Poppins-Regular.ttf);
-}
-@font-face {
-  font-family: "poppinsMd";
-  src: url(assets//fonts/Poppins-Medium.ttf);
-}
-@font-face {
-  font-family: "poppinsSb";
-  src: url(assets//fonts/Poppins-SemiBold.ttf);
-}
-@font-face {
-  font-family: "poppinsBd";
-  src: url(assets//fonts/Poppins-Bold.ttf);
-}
-@font-face {
-  font-family: "latoBd";
-  src: url(assets//fonts/Lato-Bold.ttf);
-}
-@font-face {
-  font-family: "lato";
-  src: url(assets//fonts/Lato-Regular.ttf);
-}
-@font-face {
-  font-family: "roboto";
-  src: url(assets//fonts/Roboto-Regular.ttf);
-}
-@font-face {
-  font-family: "robotoMd";
-  src: url(assets//fonts/Roboto-Medium.ttf);
-}
-@font-face {
-  font-family: "robotoBd";
-  src: url(assets//fonts/Roboto-Bold.ttf);
-}
-
-/* common css */
-
-body {
-  font: 14px poppins;
-  color: var(--colorBlack);
-}
-input:focus,
-textarea:focus,
-select:focus,
-button:focus {
-  outline: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-a:hover {
-  text-decoration: none;
-  color: inherit;
-}
-.basicRow {
-  padding: 20px 30px;
-  max-width: 1600px;
-  margin: 0 auto;
-}
-.blackBg {
-  background-color: var(--colorBlack);
-}
-.blueBg {
-  background-color: var(--colorBlue);
-}
-.lightBg {
-  background-color: #f7f7f7;
-}
-.poppins {
-  font-family: poppins;
-}
-.poppinsMd {
-  font-family: poppinsMd;
-}
-.poppinsSb {
-  font-family: poppinsSb;
-}
-.poppinsBd {
-  font-family: poppinsBd;
-}
-.centerDiv {
-  width: fit-content;
-  margin: 0 auto;
-}
-.centerFlex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.flexCenter {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.flexBetween {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-.flexBetweenCenter {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.flexNowrap {
-  flex-wrap: nowrap;
-}
-.alignStart {
-  align-items: flex-start;
-}
-.mobileCenter {
-  width: fit-content;
-  margin: 0 auto;
-}
-.textWhite {
-  color: #fff !important;
-}
-.textBlue {
-  color: var(--colorBlue);
-}
-.textBlack2 {
-  color: var(--colorBlack2);
-}
-.textBlack {
-  color: var(--colorBlack);
-}
-.headerPadding {
-  padding-top: 60px;
-}
-.pointer {
-  cursor: pointer;
-}
-.primaryIcon {
-  width: 43px;
-  height: 43px;
-  background-color: #fff;
-  border-radius: 11px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.circleIcon {
-  width: 30px;
-  height: 30px;
-  background-color: #fff;
-  border-radius: 50%;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.basicSmallText {
-  font: 14px poppins;
-  color: var(--colorBlack2);
-  font-style: italic;
-  margin: 20px 0;
-}
-
-.inputDiv {
-  margin-bottom: 10px;
-  width: 100%;
-}
-.inputText {
-  border: 1px solid var(--colorBlack);
-  padding-left: 20px;
-  height: 40px;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #fff;
-}
-.dashboardMainDiv {
-  display: flex;
-  height: 100vh;
-}
-.dashboardMainDiv .headerSec {
-  position: relative;
-  width: 100%;
-}
-/* header css */
-.navBar {
-  width: 100%;
-  z-index: 1000;
-  padding: 20px 40px;
-  box-shadow: var(--shadow);
-}
-.navBar .navBrand {
-  font: 18px poppinsMd;
-}
-.navBar .icon {
-  margin-right: 20px;
-}
-
-.sideBar {
-  width: 230px;
-  padding: 20px 20px;
-  box-shadow: var(--shadow);
-  height: 100%;
-}
-
-.sideBarM {
-  width: 230px;
-  padding: 40px 20px;
-  box-shadow: var(--shadow);
-  height: 100vh;
-  position: absolute;
-  transform: translateX(-100vw);
-  transition-delay: 0.6s;
-  -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-  background-color: #fff;
-  z-index: 9999;
-}
-.sideBarMActive {
-  transform: translateX(0px) !important;
-}
-.sideBarModal {
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.5);
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  transition-delay: 0.6s;
-  -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-  width: 100%;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 999;
-}
-.sideBarModalActive {
-  opacity: 1;
-  visibility: visible;
-}
-
-.opacityZero {
-  opacity: 0;
-}
-.navDropDownDiv {
-  position: relative;
-}
-.navDropDown {
-  position: absolute;
-  left: 0;
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 5px 6px 18px rgba(0, 0, 0, 0.07);
-  padding: 18px;
-  width: 277px;
-}
-.navDropDown .item {
-  font: 14px poppins;
-  color: var(--colorBlack);
-  margin-bottom: 15px;
-}
-.navDropDown .item:hover {
-  font: 14px poppins;
-  color: var(--colorBlue);
-  margin-bottom: 15px;
-}
-/* Button Css */
-.navaBarButton {
-  position: relative;
-  transform: translateZ(100px);
-  outline: none;
-  -webkit-tap-highlight-color: transparent;
-  width: 43px;
-  padding: 10px;
-
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-}
-.navaBarButton:hover {
-  transform: scale(1.2);
-}
-.navBarLine {
-  display: block;
-  height: 2.5px;
-  width: 100%;
-  background-color: #1f1f1f;
-  margin-bottom: 4px;
-  border-radius: 2px;
-  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-    opacity 0.2s ease-out;
-  transform: translateZ(0);
-}
-.navBarLineActive {
-  background-color: #fff;
-}
-
-.activeSideBar > .navBarLine1,
-.activeSideBar:hover > .navBarLine1 {
-  transform: translateY(6px) rotateZ(-135deg);
-  background-color: #fff !important;
-}
-.activeSideBar > .navBarLine2,
-.activeSideBar:hover > .navBarLine2 {
-  opacity: 0;
-}
-.activeSideBar > .navBarLine3,
-.activeSideBar:hover > .navBarLine3 {
-  transform: translateY(-6px) rotateZ(135deg);
-  background-color: #fff !important;
-}
-/* Button Css Ends */
-/* sideBar css */
-
-.sideBarDiv .logo {
-  width: 180px;
-}
-.navIcons .icon {
-  width: 20px;
-}
-.sideBarDiv .itemsFlex {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: column;
-  margin-top: 30px;
-  width: 100%;
-  height: 89%;
-}
-.sideBarDiv .icon {
-  width: 11px;
-}
-.sideBarDiv .DashboardSideBarItem {
-  display: flex;
-  align-items: center;
-  padding: 10px 10px;
-  width: 100%;
-  cursor: pointer;
-  user-select: none;
-}
-.sideBarDiv .sideBarItemActive .circleIcon {
-  background-color: #5ad1dd;
-}
-.sideBarDiv .sideBarItemActive .title {
-  color: #5ad1dd;
-}
-.sideBarDiv .DashboardSideBarItem:hover {
-  box-shadow: var(--shadow);
-}
-.sideBarDiv .DashboardSideBarItem .title {
-  font: 14px poppins;
-  margin-left: 20px;
-}
-/* content Sec */
-.contentMainSec {
-  background-color: rgba(90, 209, 221, 0.05);
-  height: 84%;
-  overflow: auto;
-}
-
-/* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 }
 
@@ -842,4 +706,5 @@ a:hover {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 }
-	
+
+

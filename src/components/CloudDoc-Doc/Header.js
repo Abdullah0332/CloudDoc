@@ -3,18 +3,18 @@ import React from "react";
 export default function Header({ active, setHandleActive }) {
   return (
     <div>
-      <nav class="flexBetweenCenter navBar ">
+      <nav class="flexBetweenCenter dashboardNavBar ">
         {/* SideBarButton */}
         <div className="d-inline d-md-none">
           <div
             onClick={() => setHandleActive(!active)}
             className={
-              active ? " navaBarButton activeSideBar " : "navaBarButton"
+              active ? " dashboardNavaBarButton activeSideBar " : "dashboardNavaBarButton"
             }
           >
-            <div className="navBarLine navBarLine1"></div>
-            <div className="navBarLine navBarLine2"></div>
-            <div className="navBarLine navBarLine3"></div>
+            <div className="dashboardNavBarLine dashboardNavBarLine1"></div>
+            <div className="dashboardNavBarLine dashboardNavBarLine2"></div>
+            <div className="dashboardNavBarLine dashboardNavBarLine3"></div>
           </div>
         </div>
         <a class="navBrand">Dashboard</a>
