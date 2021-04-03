@@ -6,7 +6,7 @@ export default function ChooseDoctor() {
       <div className="mainFlex">
         <div className="doctorCard" style={{ borderColor: "#48afc9" }}>
           <img
-            src="/images/CloudDoc/CloudDoctor.svg"
+            src="/images/CloudDoc/cloudDoctor.svg"
             alt="cloudDoctor"
             className="docImg"
           ></img>
